@@ -1,0 +1,44 @@
+CREATE TABLE `myblog`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(20) NOT NULL,
+  `realname` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+
+
+CREATE TABLE `myblog`.`blogs` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(50) NOT NULL,
+  `content` LONGTEXT NOT NULL,
+  `createtime` BIGINT(20) GENERATED ALWAYS AS (0),
+  `author` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+/usr/local/MySQL/bin/mysql -u root -p   mac 进入
+use myblog
+
+设置utf-8
+set character_set_database=utf8;
+set character_set_server=utf8;
+
+
+--- show tables;
+
+insert into users (username,`password`,realname) values ('lisi','123','李四');
+insert into users (username,`password`,realname) values ('lisi','123','李四')
+
+
+select * from users
+
+CREATE TABLE `myblog`.`new_table` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(20) NOT NULL,
+  `realname` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id`))
+DEFAULT CHARACTER SET = utf8;

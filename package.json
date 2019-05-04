@@ -1,0 +1,30 @@
+{
+  "name": "demoBlogs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NOOE_ENV=dev nodemon ./bin/www.js",
+    "prd": "cross-env NOOE_ENV=production nodemon ./bin/www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uustoboy/demoBlogs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uustoboy/demoBlogs/issues"
+  },
+  "homepage": "https://github.com/uustoboy/demoBlogs#readme",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.19.0"
+  }
+}

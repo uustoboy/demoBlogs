@@ -42,3 +42,50 @@ CREATE TABLE `myblog`.`new_table` (
   `realname` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`id`))
 DEFAULT CHARACTER SET = utf8;
+
+
+
+use myblog;
+
+-- ALTER TABLE users  DEFAULT CHARACTER  set utf8
+
+-- SHOW FULL COLUMNS in  users;
+
+-- select * from users
+
+-- show tables;
+-- insert into users (username,`password`,realname) values ('lisi','123','李四');
+-- insert into users (username,`password`,realname) values ('test','123','李四李四李四李四李四');
+-- delete from users where username = 'test';
+-- select * from users;
+-- select id, username from users;
+-- select * from users where username='zhangsan';
+-- select * from users where username='zhangsan' and `password` ='123';
+-- select * from users where username='zhangsan' or `password` ='123';
+-- select * from users where username  like '%zhang%';
+-- select * from users where password  like '%1%';
+-- select * from users where password  like '%1%' order by id;
+-- select * from users where password  like '%1%' order by id desc;
+
+-- SET SQL_SAFE_UPDATES = 0;
+-- update users set realname='李四2' where username='lisi';
+
+-- delete from users where username = 'lisi';
+
+-- select * from users where state='1';
+-- select * from users where state<>'0';
+
+-- update users set state='0' where username = 'lisi'; --软删除；
+-- update users set state='1' where username = 'lisi';
+
+-- insert into blogs (title,`content`,createtime,author) values ('标题A','内容A',1556884944597,'zhangsan');
+-- blogsinsert into blogs (title,`content`,createtime,author) values ('标题B','内容B',1556886190376,'lisi');
+-- select * from blogs;
+-- select * from blogs order by createtime desc;
+-- select * from blogs where author='lisi' order by createtime desc;
+-- select * from blogs where title like '%标题%' order by createtime desc;
+
+select * from users;
+-- select * from blogs;
+
+-- select version();

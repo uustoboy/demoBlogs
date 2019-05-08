@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NOOE_ENV=dev nodemon ./bin/www.js",
+    "dev2": "cross-env NOOE_ENV=winDev nodemon ./bin/www.js",
     "prd": "cross-env NOOE_ENV=production nodemon ./bin/www.js"
   },
   "repository": {

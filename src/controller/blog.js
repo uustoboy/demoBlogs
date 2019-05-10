@@ -1,4 +1,5 @@
-const { exec } = require('../db/mysql')
+const xss = require('xss')
+const { exec, escape } = require('../db/mysql')
 
 const getList = (author, keyword) => {
     //先返回假数据（格式正确）
@@ -27,7 +28,7 @@ const getDetail = (id) => {
 
 const newBlog = (blogData = {}) => {
     // blogData 是一个博客对象,包含 title content 属性
-    const title = blogData.title
+    const title = xss(blogData.title)
     const content = blogData.content
     const author = blogData.author
     const createTime = Date.now()

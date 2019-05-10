@@ -89,3 +89,7 @@ select * from users;
 -- select * from blogs;
 
 -- select version();
+
+
+
+-- SET SQL_SAFE_UPDATES = 0; 
